@@ -1,5 +1,5 @@
 //procedure pour calculer le produit vectoriel
-PROCEDURE DOTPRODUCT(Var v1,v2 : ARRAY_OF FLOAT[];)
+PROCEDURE DOTPRODUCT(Var v1,v2 : ARRAY_OF FLOAT[])
 VAR
     produit:FLOAT;
 BEGIN
@@ -15,11 +15,11 @@ END
 
 
 //procedure pour tester l'orthoganilte
-PROCEDURE are_orthogonal(v1,v2 : ARRAY_OF FLOAT[];)
+PROCEDURE are_orthogonal(v1,v2 : ARRAY_OF FLOAT[])
 VAR
     orthogonal:BOOLEAN;
 BEGIN
-    IF (DOTPRODUCT(Var v1,v2)=0) THEN
+    IF (DOTPRODUCT(v1,v2)=0) THEN
         orthogonal=true;
     ELSE
         orthogonal=false;
@@ -29,7 +29,7 @@ END
 
 
 // function Dot-product
-FUNCTION Dot-Product(v1,v2 : ARRAY_OF FLOAT[];) : FLOAT
+FUNCTION Dot-Product(v1,v2 : ARRAY_OF FLOAT[]) : FLOAT
 VAR
     produit:FLOAT;
 BEGIN
